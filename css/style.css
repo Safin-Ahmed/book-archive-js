@@ -22,3 +22,43 @@ body {
 .card:hover {
     transform: translateY(-50px);
 }
+
+/* Error Handling */
+
+#error {
+    color: #fff;
+}
+
+#error h3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Loading Spinner*/
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 999999999999999;
+}
+.loading{
+   
+}
+.loading-spinner{
+    background-color: #000;
+    margin: auto;
+    border: 3px solid #fff;
+    position: fixed;
+    left: 49%;
+    top: 49%;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 999999999999999;
+    
+}

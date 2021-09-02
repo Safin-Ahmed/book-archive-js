@@ -1,5 +1,15 @@
+// Loading Spinner Toggle 
+const toggleSpinner = display => {
+    const spinnerBg = document.getElementById('spinner-overlay');
+    const spinner = document.getElementById('spinner');
+    spinnerBg.style.display = display;
+    spinner.style.display = display;
+}
 // Get Search Field Value 
 const getSearchText = () => {
+    toggleSpinner('block');
+    const errorContainer = document.getElementById('error');
+    errorContainer.innerHTML = '';
     const searchField = document.getElementById('search-field');
     const searchFieldText = searchField.value;
     searchField.value = '';
@@ -19,6 +29,13 @@ const displayData = data => {
     console.log(data);
     const searchResults = document.getElementById('search-results');
     searchResults.textContent = '';
+    const errorContainer = document.getElementById('error');
+    if(data.numFound === 0 || !data){
+        
+        errorContainer.innerHTML = `
+            <h3>Search Result Not Found! Please Try again</h3>
+        `;
+    }
     data.docs.forEach(element => {
         const div = document.createElement('div');
         div.classList.add('col');
@@ -35,5 +52,7 @@ const displayData = data => {
             </div>
         `;
         searchResults.appendChild(div);
-    });
+     });
+
+     toggleSpinner('none');
 }
