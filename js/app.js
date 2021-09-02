@@ -1,3 +1,8 @@
+// User Data 
+const userInput = prompt('Please insert your name');
+document.getElementById('intro').innerHTML = `
+    Welcome to Book Archive, ${userInput}
+`
 // Loading Spinner Toggle 
 const toggleSpinner = display => {
     const spinnerBg = document.getElementById('spinner-overlay');
@@ -28,7 +33,12 @@ const loadData = async data => {
 const displayData = data => {
     console.log(data);
     const searchResults = document.getElementById('search-results');
+    const resultTracking = document.getElementById('results-track');
+    // Clearing the results 
+    resultTracking.textContent = '';
     searchResults.textContent = '';
+
+    // Search Field Validation
     const errorContainer = document.getElementById('error');
     if(data.numFound === 0 || !data){
         
@@ -36,6 +46,12 @@ const displayData = data => {
             <h3>Search Result Not Found! Please Try again</h3>
         `;
     }
+
+    // Result Number Tracking 
+  
+    resultTracking.innerHTML = `
+        <p class = "mt-5 text-white text-center"><span>${data.docs.length} results are showing of ${data.numFound} results</span></p>
+    `
     data.docs.forEach(element => {
         const div = document.createElement('div');
         div.classList.add('col');
