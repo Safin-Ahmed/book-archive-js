@@ -1,13 +1,29 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
 html {
     height: 100%;
 }
 body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+/* Search Box */
+button#submit {
+    position: relative;
+    right: 35px;
 
+}
+button.search-mobile{
+    display: none;
+}
 /* Search Result Lists */
 
 #search-results {
@@ -62,3 +78,18 @@ body {
     z-index: 999999999999999;
     
 }
+
+/* Responsive */
+
+@media (max-width: 640px){
+    .loading-spinner {
+        left: 46% !important;
+    } 
+    input#search-field{
+        width: 100% !important;
+    }
+    button.search-mobile{
+        display: block;
+    }
+}
+    

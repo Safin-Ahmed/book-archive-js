@@ -19,15 +19,22 @@
   
   </div>
   <svg id="spinner" class="loading-spinner animate-spin h-7 w-7 mr-3 ..." viewBox="0 0 24 24">
-    <!-- ... -->
-  </svg>  
+  </svg>
+
+  <!-- Heading -->
+  <h1 id="intro" class="mb-4 text-white text-center"></h1>
     <!-- Search Box Component-->
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto p-0 pb-5 sm:px-4">
         <div class="flex justify-center search-box text-center">
-            <input placeholder="Find Your Desired Book" class="text-white px-4 py-2 shadow rounded w-1/3 bg-gray-900 bg-opacity-75 focus:outline-none" type="text" id="search-field">
-            <button onclick="getSearchText()" class="relative right-12 w-12 p-1 bg-transparent text-white" id="submit"><i class="fas fa-search"></i></button>
+            <input placeholder="Find Your Desired Book" class="text-white px-4 py-2 shadow rounded sm:w-1/3 bg-gray-900 bg-opacity-75 focus:outline-none" type="text" id="search-field">
+            <button onclick="getSearchText()" class="hidden sm:block bg-transparent text-white" id="submit"><i class="fas fa-search"></i></button>
         </div>
-             
+        <div class="d-grid gap-2">
+          <button onclick="getSearchText()" class="search-mobile btn shadow mt-2 rounded bg-dark text-white focus:outline-none" type="button">Search</button>
+        </div>
+        <div id = "results-track">
+          
+        </div>    
         <div id="error">
 
         </div>
