@@ -1,7 +1,7 @@
 // User Data 
 const userInput = prompt('Please insert your name');
 document.getElementById('intro').innerHTML = `
-    Welcome to Book Archive, ${userInput}
+    Welcome to Book Archive, ${userInput ? userInput : 'Guest'}
 `
 // Loading Spinner Toggle 
 const toggleSpinner = display => {
