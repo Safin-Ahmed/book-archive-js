@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Archive</title>
+    <!-- Tailwind CSS -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a029a78155.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
     <link rel="stylesheet" src="css/style.css">
 </head>
-<body>
-    
+<body class=" h-screen p-14 bg-gradient-to-br from-pink-300 to-purple-600">
+    <!-- Search Box Component-->
+    <div class="container mx-auto px-4">
+        <div class="flex justify-center search-box text-center">
+            <input placeholder="Find Your Desired Book" class="text-white px-4 py-2 shadow rounded w-1/3 bg-gray-900 bg-opacity-75 focus:outline-none" type="text" id="search-field">
+            <button class="relative right-12 w-12 p-1 bg-transparent text-white" id="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <!-- Custom Javascript file -->
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+Step 1 : Design the search box and button and overall page
+Step 2 : Load the api data and display the datas into the page in cards. 
+step 3 : Arrange the cards and designs and make everything look gorgeous 
+step 4 : Show how many search results are found for the input in search box 
+step 5 : If a user inputs invalid keywords then throw an error 
+
+DIsplay : 
+
+Book Name
+Author Name 
+Book Publisher Name
+First Publish Date (If Available display and if not available do anything)
+
+You have to show how many search results are found under search box
+
+If Search text is not found then return an error Not found 
+
+
+Bonus Marks -- > 
+1. All functions must be Arrow Function 
+2. You have to use forEach for all kind of loops
+3. Your have to use === and != if you are working in compare sections 
+4. Dynamic Book Cover Image 
